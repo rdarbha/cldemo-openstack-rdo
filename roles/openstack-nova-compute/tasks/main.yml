@@ -23,6 +23,7 @@
   service: name={{ item }} state=started enabled=true
   with_items:
       - openstack-nova-compute
+      - libvirtd
 
 - name: wait for nova to wake up
   pause: seconds=10
