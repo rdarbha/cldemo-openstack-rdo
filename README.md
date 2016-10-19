@@ -1,6 +1,7 @@
 Openstack RDO Demo
 ==============
 This demo is an ansible playbook that installs Openstack Mitaka on the reference topology using centos.
+
 Quickstart: Run the demo
 ------------------------
 (This assumes you are running Ansible 1.9.4 and Vagrant 1.8.4 on your host.)
