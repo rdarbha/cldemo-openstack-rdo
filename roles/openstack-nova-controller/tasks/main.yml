@@ -52,11 +52,11 @@
 - name: start nova
   service: name={{ item }} state=started enabled=true
   with_items:
-      - nova-api
-      - nova-consoleauth
-      - nova-scheduler
-      - nova-conductor
-      - nova-novncproxy
+      - openstack-nova-api
+      - openstack-nova-consoleauth
+      - openstack-nova-scheduler
+      - openstack-nova-conductor
+      - openstack-nova-novncproxy
 
 - name: wait for nova to wake up
   pause: seconds=10

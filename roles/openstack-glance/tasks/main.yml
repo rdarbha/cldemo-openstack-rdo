@@ -34,10 +34,10 @@
 
 
 - name: start glance api
-  service: name=glance-api state=started
+  service: name=openstack-glance-api state=started
 
 - name: start glance regisry
-  service: name=glance-registry state=started
+  service: name=openstack-glance-registry state=started
 
 
 - name: wait for glance to wake up

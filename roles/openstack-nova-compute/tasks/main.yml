@@ -22,7 +22,7 @@
 - name: start nova compute
   service: name={{ item }} state=started enabled=true
   with_items:
-      - nova-compute
+      - openstack-nova-compute
 
 - name: wait for nova to wake up
   pause: seconds=10

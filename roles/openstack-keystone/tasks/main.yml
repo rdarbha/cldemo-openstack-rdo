@@ -35,7 +35,7 @@
   meta: flush_handlers
 
 - name: start keystone
-  service: name=keystone state=started
+  service: name=openstack-keystone state=started
 
 - name: wait for keystone to wake up
   pause: seconds=10
