@@ -8,7 +8,7 @@
     - python2-PyMySQL
 
 - name: configure mysql to run on all ports.
-  copy: src=mysqld.cnf dest=/etc/my.conf.d/openstack.cnf
+  copy: src=mysqld.cnf dest=/etc/my.cnf.d/mariadb-server.cnf
   notify: restart mariadb
 
 - name: flush handlers in case of changed config
