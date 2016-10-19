@@ -89,10 +89,10 @@ openstack:
         server04: "10.0.0.34"
     provider_network:
         iface:
-            server01: "eth0"
-            server02: "eth0"
-            server03: "eth0"
-            server04: "eth0"
+            server01: "mgmt"
+            server02: "mgmt"
+            server03: "mgmt"
+            server04: "mgmt"
         cidr: "192.168.0.0/24"
         start: "192.168.0.100"
         end: "192.168.0.150"
