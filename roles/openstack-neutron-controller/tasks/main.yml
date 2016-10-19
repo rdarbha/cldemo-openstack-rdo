@@ -31,6 +31,10 @@
       - l3_agent.ini
   notify: restart neutron
 
+- name: Create symlink to example.com
+  file: src=/etc/neutron/plugins/ml2/ml2_conf.ini dest=/etc/neutron/plugin.ini state=link
+  notify: nginx reload
+
 - name: ml2 config files
   template: src={{item}}.j2 dest=/etc/neutron/plugins/ml2/{{item}}
   with_items:
