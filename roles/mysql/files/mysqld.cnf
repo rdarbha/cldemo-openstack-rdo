@@ -16,7 +16,7 @@
 [mysqld]
 datadir=/var/lib/mysql
 socket=/var/lib/mysql/mysql.sock
-bind-address = 10.0.0.11
+bind-address = 10.0.0.31
 
 log-error=/var/log/mariadb/mariadb.log
 pid-file=/var/run/mariadb/mariadb.pid
