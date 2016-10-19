@@ -8,7 +8,7 @@
   with_items:
     - openstack-nova-api
     - openstack-nova-conductor
-    - openstack-nova-consol
+    - openstack-nova-console
     - openstack-nova-novncproxy
     - openstack-nova-scheduler
     - python-openstackclient
