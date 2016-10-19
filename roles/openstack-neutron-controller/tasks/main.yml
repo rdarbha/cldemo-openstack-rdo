@@ -11,6 +11,7 @@
     - openstack-neutron-linuxbridge
     - ebtables
     - python-openstackclient
+    - openstack-selinux
 
 # Install and configure Nova
 - name: create a table for neutron

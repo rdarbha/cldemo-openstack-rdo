@@ -8,7 +8,6 @@
   with_items:
     - openstack-keystone
     - python-openstackclient
-    - openstack-selinux
 
 # Install and configure Keystone
 

@@ -10,7 +10,7 @@
     - ebtables
     - ipset
     - python-openstackclient
-
+    - openstack-selinux
 
 
 - name: neutron config files
