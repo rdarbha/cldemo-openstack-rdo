@@ -3,16 +3,16 @@
   notify: reload sysctl files
 
 - name: Install iproute for Quagga dependency
-  apt: name=iproute update_cache=yes state=present cache_valid_time=86400
+  yum: name=iproute update_cache=yes state=present cache_valid_time=86400
 
 - name: download official quagga deb
-  get_url: url=https://s3.amazonaws.com/cumulusfiles/roh-ubuntu1604.tar validate_certs=False dest=/tmp/quagga.tar force=no
+  get_url: url=https://s3.amazonaws.com/cumulusfiles/roh-rhel7.tar validate_certs=False dest=/tmp/quagga.tar force=no
 
 - name: Untar the package
   unarchive: src=/tmp/quagga.tar dest=/tmp/ copy=no
 
 - name: Install Quagga
-  apt: deb=/tmp/ubuntu1604/quagga_0.99.23.1-1+cl3u2_xenial_amd64.deb
+  yum: rpm=/tmp/rhel7/quagga-0.99.23.1+cl3u2-2016062001.el7.centos.x86_64.rpm
 
 - name: copy Quagga daemons
   copy: src=daemons dest=/etc/quagga/
@@ -28,13 +28,13 @@
 - name: Force Interfaces Down
   command: ifdown {{item}}
   with_items:
-    - lo
-    - eth1
-    - eth2
+    - lo:0
+    - uplink1
+    - uplink2
 
 - name: Force Interfaces Up
   command: ifup {{item}}
   with_items:
-    - lo
-    - eth1
-    - eth2
+    - lo:0
+    - uplink1
+    - uplink2

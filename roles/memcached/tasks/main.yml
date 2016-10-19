@@ -1,10 +1,10 @@
 
 # Install required packages
 - name: install packages
-  apt: pkg={{item}} state=present
+  yum: pkg={{item}} state=present
   with_items:
     - memcached
-    - python-memcache
+    - python-memcached
 
 - name: memcached config files
   template: src={{item}}.j2 dest=/etc/{{item}}

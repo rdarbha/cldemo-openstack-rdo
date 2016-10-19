@@ -1,13 +1,11 @@
 {% set intvars = interfaces[ansible_hostname] -%}
 !
-interface eth1
+{% for neighbor in intvars.neighbors %}
+interface {{neighbor}}
  no ipv6 nd suppress-ra
  ipv6 nd ra-interval 3
 !
-interface eth2
- no ipv6 nd suppress-ra
- ipv6 nd ra-interval 3
-!
+{% endfor %}
 router bgp {{ intvars.asn }}
   bgp router-id {{ intvars.loopback }}
   network {{ intvars.loopback }}/32

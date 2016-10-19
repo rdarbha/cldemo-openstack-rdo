@@ -1,17 +1,12 @@
 
 # Install required packages
 - name: get the mitaka packages
-  apt_repository: repo='deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/mitaka main' state=present
-
-- name: install keyring
-  apt: pkg={{item}} state=present
-  with_items:
-    - ubuntu-cloud-keyring
+  yum: pkg=centos-release-openstack-mitaka state=present update_cache=yes
 
 - name: install packages
-  apt: pkg={{item}} state=present update_cache=yes
+  yum: pkg={{item}} state=present update_cache=yes
   with_items:
-    - glance
+    - openstack-glance
     - python-openstackclient
 
 # Install and configure Glance
