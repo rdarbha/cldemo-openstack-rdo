@@ -32,7 +32,6 @@
   service: name={{ item }} state=started enabled=true
   with_items:
       - neutron-linuxbridge-agent
-      - neutron-l3-agent
 
 - name: wait for neutron to wake up
   pause: seconds=10
