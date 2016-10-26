@@ -53,7 +53,7 @@ following commands in each. When prompted for a password, enter `CumulusLinux!`.
 
 Leave these terminals open - they will create tunnels that will allow you to
 access the Horizon dashboard and the noVNC console clients using your web
-browser. Navigate to  http://localhost:8080/horizon in your web browser.
+browser. Navigate to  http://localhost:8080/dashboard in your web browser.
 Log in with the demo user (password is `demo`) and the default domain. You
 should be able to see the last two steps. Open one of them and go to the "console"
 tab. You should be able to access the serial console from this web page.
