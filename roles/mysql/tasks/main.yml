@@ -1,7 +1,10 @@
 
 # Install required packages
+- name: get the mitaka packages
+  yum: pkg=centos-release-openstack-mitaka state=present update_cache=yes
+
 - name: install packages
-  yum: pkg={{item}} state=present update_cache=yes
+  yum: pkg={{item}} state=present
   with_items:
     - mariadb
     - mariadb-server
