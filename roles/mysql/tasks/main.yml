@@ -1,7 +1,7 @@
 
 # Install required packages
 - name: install packages
-  yum: pkg={{item}} state=present
+  yum: pkg={{item}} state=present update_cache=yes
   with_items:
     - mariadb
     - mariadb-server
