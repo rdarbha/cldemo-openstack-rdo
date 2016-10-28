@@ -1,6 +1,12 @@
 #/etc/sysctl.d/99cumulus_defaults.conf
 #Place this file on the ubuntu12.04,ubuntu 14.04, ubuntu 16.04, RHEL device and restart
 
+net.ipv4.conf.default.accept_source_route = 1
+net.ipv4.conf.all.accept_source_route = 1
+net.bridge.bridge-nf-call-arptables = 0
+net.bridge.bridge-nf-call-ip6tables = 0
+net.bridge.bridge-nf-call-iptables = 0
+
 #Required if we're to work as a router
 net.ipv4.conf.all.rp_filter = 0
 net.ipv4.conf.default.rp_filter = 0
