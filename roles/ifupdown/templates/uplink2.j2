@@ -1,7 +1,7 @@
 {% set intvars = interfaces[ansible_hostname] %}
 {% set neighborvars = intvars['neighbors'] %}
-DEVICE=uplink2
+DEVICE=eth3
 IPADDR={{intvars.loopback}}
 NETMASK=255.255.255.255
 ONBOOT=yes
-NAME=uplink2
+NAME=eth3
