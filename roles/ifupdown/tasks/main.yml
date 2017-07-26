@@ -8,7 +8,7 @@
   template: src=loopback.j2 dest=/etc/sysconfig/network-scripts/ifcfg-lo:0
 
 - name: configure uplink1
-  template: src=uplink1.j2 dest=/etc/sysconfig/network-scripts/ifcfg-uplink1
+  template: src=uplink1.j2 dest=/etc/sysconfig/network-scripts/ifcfg-eth2
 
 - name: configure lo:0
-  template: src=uplink2.j2 dest=/etc/sysconfig/network-scripts/ifcfg-uplink2
+  template: src=uplink2.j2 dest=/etc/sysconfig/network-scripts/ifcfg-eth3
