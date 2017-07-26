@@ -1,0 +1,10 @@
+
+
+- name: install epel-release
+  yum: name=epel-release update_cache=yes state=present
+
+- name: install lldpd
+  yum: name=lldpd update_cache=yes state=present
+
+- name: start lldpd
+  service: name=lldpd state=started

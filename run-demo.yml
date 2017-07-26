@@ -18,6 +18,7 @@
   become: yes
   become_method: sudo
   roles:
+    - lldp
     - ifupdown
     - quagga-roh
 - hosts: server01
